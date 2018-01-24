@@ -1,1 +1,76 @@
-<a href="/0/0.html">æ–‡æ˜Œé˜</a>
+<!DOCTYPE html>
+<head>
+	<style type="text/css"> 
+	body
+	  {
+		background-color:#535353;
+	  }
+	  
+	a {
+		color:#fff;
+		text-decoration: none;
+	} /* ÒÑ»òÎ´·ÃÎÊÁ´½ÓÑÕÉ« */
+		
+	a:hover {
+		color:#ddd;	
+		text-decoration: none;
+	} /* ĞüÍ£Ê±Á´½ÓÑÕÉ« */
+
+		
+	
+    </style>
+	<title>361È«¾°ÉãÓ°</title>
+
+<body>
+
+<h1 id="title" align="center" >361È«¾°ÉãÓ°</h1><br><br><br>
+
+<h2 name="sub" align="center">×÷Æ·£º<br><br>
+
+<div align="center">
+	<a name="file" href="/0">ÎÄ²ı¸ó</a><br>
+	<a name="file" href="/1">ËÕÇø±ø¹¤³§</a><br>
+	<a name="file" href="/2">ÌúË÷ÇÅ</a><br>
+</div>
+
+<br>
+
+</body>
+
+<script language=javascript>
+
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+if(IsPC()!=true)
+{	
+	document.getElementById('title').style.fontSize="108px";
+
+	var aDoms = document.getElementsByName('file'), 
+    oL= aDoms.length; 
+	for(var k=0;k<oL;k++){ 
+	   aDoms[k].style.fontSize="72px";
+	}
+	
+	var aDoms2 = document.getElementsByName('sub'), 
+    oL2= aDoms2.length; 
+	for(var k2=0;k2<oL2;k2++){ 
+	   aDoms2[k2].style.fontSize="96px";
+	}
+
+}
+ </script>
+ 
+</html>
