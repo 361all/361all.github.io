@@ -66,9 +66,10 @@ function IsPC() {
     return flag;
 }
 
-if(IsPC()!=true)
+if(IsPC()==true)
 {	
 	document.getElementById('title').style.fontSize="108px";
+	document.getElementById('foot').style.fontSize="30px";
 
 	var aDoms = document.getElementsByName('file'), 
     oL= aDoms.length; 
