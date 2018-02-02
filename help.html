@@ -3,6 +3,7 @@
 
 </head>
 <body>
+<div id="main">
 Q：我的照片要多久出来？<br>
 A：一般三四天，最多不会超过七个工作日。<br><br>
 
@@ -16,7 +17,7 @@ A：暂不接受预约。<br><br>
 
 Q：如何分享至社交网站（微信、QQ、微博等）？<br>
 A：通过任一全景图平台即可。<br>
-平台一：转转鸟<a href="http://www.detu.com/login">入口</a>；
+平台一：得图<a href="http://www.detu.com/login">入口</a>；
 <a href="https://jingyan.baidu.com/article/c1a3101e72789bde646deb73.html">参考</a><br>
 
 平台二：insta360（移动端）；使用方法：
@@ -33,9 +34,35 @@ A：下载任一款全景图软件即可。<br>
 <a href="https://static.insta360.com/software/Studio/Windows/Insta360Studio_Win_x64_V2.12.0.exe">PC端Windows 下载</a>
 <a href="https://static.insta360.com/software/Studio/Mac/Insta360Studio_Mac_2.12.0.pkg">PC端Mac OSX 下载</a>
 <br><br>
+<br>
+<a href="http://361all.com/">返回首页</a>
+</div>
 
 
 
 </body>
+<script language=javascript>
+
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+if(IsPC()!=true)
+{	
+	document.getElementById('main').style.fontSize="72px";
+
+}
+ </script>
 
 </html>

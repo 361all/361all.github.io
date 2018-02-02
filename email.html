@@ -3,7 +3,35 @@
 
 </head>
 <body>
-发邮件至 3378270384@qq.com，提供您的【账号】和取片【密码】即可。
+<div id="main" align="center">
+发邮件至 3378270384@qq.com，<br>提供您的取片【账号】和取片【密码】即可。<br>
+<a href="http://361all.com/">返回首页</a>
+</div>
+</font>
 </body>
+
+<script language=javascript>
+
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+if(IsPC()!=true)
+{	
+	document.getElementById('main').style.fontSize="72px";
+
+}
+ </script>
 
 </html>

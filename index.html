@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
 	<style type="text/css"> 
 	body
@@ -19,6 +19,11 @@
 	#foot{
 		color:#000;
 		font-size:14px;
+	}
+	
+	#foots{
+		color:#000;
+		font-size:18px;
 	}
 	
 	#title{
@@ -57,11 +62,15 @@
 
 <div id="foot" align="center" >
 Copyright © 2017 - 2018 361all. All Rights Reserved.<br>
-<a href="help.html">帮助</a>
-<!--a href="mailto:3378270384@qq.com">邮箱取照</a-->
-<a href="email.html">邮箱取照</a>
-<a href="login.html">自助取照</a>
 </div>
+
+<div id="foots" align="center" >
+	<a href="help.html">帮助</a>
+	<!--a href="mailto:3378270384@qq.com">邮箱取照</a-->
+	<a href="email.html">邮箱取照</a>
+	<a href="login.html">自助取照</a>
+</div>
+
 
 <br>
 
@@ -87,7 +96,8 @@ function IsPC() {
 if(IsPC()!=true)
 {	
 	document.getElementById('title').style.fontSize="108px";
-	document.getElementById('foot').style.fontSize="20px";
+	document.getElementById('foot').style.fontSize="25px";
+	document.getElementById('foot').style.fontSize="36px";
 
 	var aDoms = document.getElementsByName('file'), 
     oL= aDoms.length; 
