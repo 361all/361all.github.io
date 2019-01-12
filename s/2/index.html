@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>四季</title>
+    <style>
+body{
+	background:#069;
+}
+
+#main{	
+	position: relative;
+	width: 184px;
+    height: 242px;
+	left:35%;
+	margin-left:-200px;
+	top:250px;
+    transform-style: preserve-3d;
+}
+
+#pic{
+	width: 368px;
+    height: 484px;
+	position: absolute;
+	top:15%;
+	left:55%;
+	border:1px solid #fff;
+	-webkit-transform:rotateZ(0deg);
+	background-size:100% 100%; 
+}
+
+#main>div{
+    position: absolute;
+}
+
+.side{
+	width: 184px;
+    height: 242px;
+}
+
+.ye{
+	width: 240px;
+    height: 600px;
+	top:-179px;
+}
+
+.ye1{
+	width: 240px;
+    height: 500px;
+	top:-129px;
+}
+
+.deng{
+	width: 240px;
+    height: 430px;
+	top:-99px;
+}
+
+.bottom{
+	width: 368px;
+    height: 323px;
+    left:0px;
+	top:-39px;
+    transform: rotateY(270deg) rotateZ(90deg) translateZ(214px);
+	-webkit-transform:rotateY(270deg) rotateZ(90deg) translateZ(214px);
+}
+.up{
+	width: 368px;
+    height: 323px;
+    left:0px;
+	top:-39px;
+    transform: rotateY(90deg) rotateZ(90deg) translateZ(29px);
+	-webkit-transform:rotateY(90deg) rotateZ(90deg) translateZ(29px);
+}
+
+
+@media screen and (max-device-width:640px){
+
+#main{	
+	position: absolute;
+	left:50%;
+	top:100px;
+	margin-left:-90px;
+
+}
+	
+#pic{
+	position: relative;
+	left:50%;
+	top:550px;
+	margin-left:-180px;
+}
+
+}
+
+	</style>
+</head>
+<body>
+<div id="main">
+	
+	<div id="sb1" class="side"></div>
+    <div id="sb2" class="side"></div>
+    <div id="sb3" class="side"></div>
+    <div id="sb4" class="side"></div>
+    <div id="sb5" class="side"></div>
+    <div id="sb6" class="side"></div>
+	<div id="sb7" class="up"></div>
+    <div id="sb8" class="bottom"></div>  
+  	
+	<div id="s1" class="side"></div>
+    <div id="s2" class="side"></div>
+    <div id="s3" class="side"></div>
+    <div id="s4" class="side"></div>
+    <div id="s5" class="side"></div>
+    <div id="s6" class="side"></div>
+	<div id="s7" class="up"></div>
+    <div id="s8" class="bottom"></div>
+	
+	<div id="y1" class="ye"></div>
+    <div id="y2" class="ye"></div>
+    <div id="y3" class="ye"></div>
+    <div id="y4" class="ye"></div>
+    <div id="y5" class="ye"></div>
+    <div id="y6" class="ye"></div>
+	
+	<div id="y11" class="ye1"></div>
+    <div id="y12" class="ye1"></div>
+    <div id="y13" class="ye1"></div>
+    <div id="y14" class="ye1"></div>
+    <div id="y15" class="ye1"></div>
+    <div id="y16" class="ye1"></div>
+	
+	<div id="d1" class="deng"></div>
+    <div id="d2" class="deng"></div>
+    <div id="d3" class="deng"></div>
+    <div id="d4" class="deng"></div>
+    <div id="d5" class="deng"></div>
+    <div id="d6" class="deng"></div>
+
+</div>
+<div id="pic"></div>
+</body>
+<script>
+
+	function mod(a,b)
+	{	
+		if(a>0) return a%b;
+		if(a%b) return b-((-a)%b);
+		return 0;
+	}
+	function getOpacity(m,s)
+	{
+		if(s==null)s=1;
+		m=2*Math.abs(m-0.5);
+		m=1-m;m=m*s;		
+		if(m<0) return 0;
+		if(m>1) return 1;
+		return m;		
+	}
+	
+	function getOpacity2(m,s)
+	{
+		if(s==null)s=1;
+		m=m*s;	
+		m-=(s-1)*0.5;
+		if(m<0) return 0;
+		if(m>1) return 1;
+		return m;		
+	}
+	
+	function getOpacity3(m,a,b)
+	{
+		m=2*Math.abs(m-0.5);
+		m=a+m*(b-a);
+		if(m<0) return 0;
+		if(m>1) return 1;
+		return m;		
+	}
+	
+	var oMain=document.getElementById('main');
+	var oPic=document.getElementById('pic');
+	var picn=new Array("s1.jpg","s2.jpg","s3.jpg","s4.jpg","s5.jpg","s6.jpg","up.png","bottom.png"); 
+	var imgn=new Array("1","2","a","3","4","b"); 
+	
+	function move(a,b)
+	{
+
+		var x=parseFloat (oMain.style['-webkit-transform'].split('rotateX(')[1].split('deg')[0])+(-b);
+		if(x<-20) x=-20;if(x>20) x=20;
+		var y=parseFloat (oMain.style['-webkit-transform'].split('rotateY(')[1].split('deg')[0])+(a);
+		//y=0;
+		var z=parseFloat (oMain.style['-webkit-transform'].split('rotateZ(')[1].split('deg')[0])+(a);
+		z=-90;
+		oMain.style['transform']=oMain.style['-webkit-transform'] ="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+		//oPic.innerHTML=mod(Math.floor((y+30)/60),6);
+		oPic.style.backgroundImage="url('img/"+imgn[mod(Math.floor((y-30)/60),6)]+"s"+(mod(Math.floor((y+30)/60),6)+1)+".jpg')";
+		oPic.style.opacity = getOpacity(mod(y+30,60)/60,1.5);
+	
+		for(var i=1;i<=8;i++)
+		{
+			document.getElementById('s'+i).style.backgroundImage="url('img/"+imgn[mod(Math.floor((y-60)/60),6)]+picn[i-1]+"')";
+			document.getElementById('sb'+i).style.backgroundImage="url('img/"+imgn[mod(Math.floor((y)/60),6)]+picn[i-1]+"')";
+			document.getElementById('s'+i).style.opacity= getOpacity2(1-(mod(y,60)/60),1.5);
+		}
+		
+		for(var i=1;i<=6;i++)
+		{
+			//document.getElementById('y'+i).style.backgroundImage="url('img/"+imgn[mod(Math.floor((y)/60),6)]+picn[i-1]+"')";
+			document.getElementById('y'+i).style.opacity= getOpacity3(1-(mod(y,1080)/1080),0.8,-2.4);
+			document.getElementById('y1'+i).style.opacity= getOpacity3(1-(mod(y,1080)/1080),0.8,-2.2);
+			document.getElementById('d'+i).style.opacity= getOpacity3(1-(mod(y+360,1080)/1080),1.4,-3.4);
+		
+		}
+	};
+	
+    window.onload=function (){
+        oMain.style['transform']=oMain.style['-webkit-transform'] ="rotateX(-20deg) rotateY(0deg) rotateZ(270deg)";
+		for(var i=1;i<=6;i++)
+		{
+			document.getElementById('s'+i).style['transform']=
+			document.getElementById('s'+i).style['-webkit-transform']=
+			document.getElementById('sb'+i).style['transform']=
+			document.getElementById('sb'+i).style['-webkit-transform']=
+			"rotateX("+(-60+60*i)+"deg) translateZ(159.34px) rotateZ(90deg)";
+			
+			document.getElementById('y'+i).style['transform']=
+			document.getElementById('y'+i).style['-webkit-transform']=
+			"rotateX("+(-60+60*i)+"deg) translateZ(281px) rotateZ(90deg) translateY(105px) rotateX(124deg)";	
+			document.getElementById('y'+i).style.backgroundImage="url('img/ye.png')";
+			
+			document.getElementById('y1'+i).style['transform']=
+			document.getElementById('y1'+i).style['-webkit-transform']=
+			"rotateX("+(-30+60*i)+"deg) translateZ(272px) rotateZ(90deg) translateY(95px) rotateX(120deg)";	
+			document.getElementById('y1'+i).style.backgroundImage="url('img/ye1.png')";
+			
+			document.getElementById('d'+i).style['transform']=
+			document.getElementById('d'+i).style['-webkit-transform']=
+			"rotateX("+(-30+60*i)+"deg) translateZ(120px) translateX(-75px) rotateX(-90deg) rotateZ(90deg) ";	
+			document.getElementById('d'+i).style.backgroundImage="url('img/deng.png')";
+		}
+	
+        oMain.onmousedown = function(ev){ return move0(ev,move);};
+        oMain.ontouchstart = function(ev){ return move1(ev,move);};
+		oMain.onmousewheel = function(ev){ return move2(ev,move); };
+        move(0,0);
+    }
+
+    function move0(ev,mvfn)
+    {
+        var ev = ev || window.event;
+        var disX = ev.clientX;
+        var disY = ev.clientY;
+
+        document.onmousemove = function(ev){
+            var ev = ev || window.event;
+            mvfn(ev.clientX - disX,ev.clientY - disY);
+            disX = ev.clientX;disY = ev.clientY;
+
+        };
+        document.onmouseup = function(){
+            document.onmousemove = null;
+        };
+        return false;
+    }
+
+    function move1(ev,mvfn)
+    {
+        var disX = ev.changedTouches[0].clientX;
+        var disY = ev.changedTouches[0].clientY;
+        document.ontouchmove = function(ev){
+
+            mvfn(ev.changedTouches[0].clientX - disX,ev.changedTouches[0].clientY - disY);
+            disX = ev.changedTouches[0].clientX;
+            disY = ev.changedTouches[0].clientY;
+
+        };
+        document.ontouchend = function(){
+            document.ontouchstart = null;
+            document.ontouchmove = null;
+        };
+        return false;
+    }
+	
+	function move2(ev,mvfn)
+	{
+		var delta = 0;
+		if (ev.wheelDelta) {
+			delta = ev.wheelDelta/120; 
+			if (window.opera) delta = -delta;
+		} else if (ev.detail) {
+			delta = -ev.detail/3;
+		}
+		if (delta) mvfn(5*delta,0);
+		return false;
+	}
+
+
+</script>
+</html>
