@@ -31,6 +31,7 @@ body{
 	margin-left:-200px;
 	top:250px;
     transform-style: preserve-3d;
+	display:none;
 }
 
 #pic{
@@ -262,6 +263,7 @@ body{
 		{
 			clearInterval(imgLoad);
 			document.getElementById('loading').style.display="none";
+			document.getElementById('main').style.display="block";
 			return;
 		}	
 		ready=0;
