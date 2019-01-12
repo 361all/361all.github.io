@@ -43,6 +43,7 @@ body{
 	border:1px solid #fff;
 	-webkit-transform:rotateZ(0deg);
 	background-size:100% 100%; 
+	display:none;
 }
 
 #main>div{
@@ -264,6 +265,7 @@ body{
 			clearInterval(imgLoad);
 			document.getElementById('loading').style.display="none";
 			document.getElementById('main').style.display="block";
+			document.getElementById('pic').style.display="block";
 			return;
 		}	
 		ready=0;
