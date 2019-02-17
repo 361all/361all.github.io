@@ -8,10 +8,10 @@
 <script>
 
 window.onload = function(){
-	scalex=848/window.screen.availWidth;
+	scalex=0.5*848/window.screen.availWidth;
 	scaley=500/window.screen.availHeight;
 	scale=(scalex<scaley)?scalex:scaley;
-	//console.log(scalex+" "+ scaley+" "+ scale);
+	console.log(scalex+" "+ scaley+" "+ scale);
 	document.getElementById("view").setAttribute('content','user-scalable=yes, width=device-width, initial-scale='+scalex.toFixed(2));
 	var oV = document.getElementById('v1');
 	var aInput = document.getElementsByTagName('input');
