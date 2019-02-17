@@ -47,3 +47,8 @@ body{ background: #3980c3;}
 #pauseplay{ cursor: pointer; top: 420px; left:728px;}
 
 a{color:#777;} 
+
+
+@media screen and (max-device-width:640px){
+#div1{top:-36px;}
+}
