@@ -8,8 +8,8 @@
 <script>
 
 window.onload = function(){
-	scalex=0.5*848/window.screen.availWidth;
-	scaley=0.5*500/window.screen.availHeight;
+	scalex=848/window.screen.availWidth;
+	scaley=500/window.screen.availHeight;
 	scale=(scalex<scaley)?scalex:scaley;
 	//console.log(scalex+" "+ scaley+" "+ scale);
 	document.getElementById("view").setAttribute('content','user-scalable=yes, width=device-width, initial-scale='+scale.toFixed(2));
