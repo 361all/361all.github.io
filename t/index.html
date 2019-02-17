@@ -9,38 +9,6 @@
 
 window.onload = function(){
 
-	/* preload 
-	var newimages=[];
-	function preloadimages(arr){
-		
-		var arr=(typeof arr!="object")? [arr] : arr  ;
-		for (var i=0; i<arr.length; i++){
-			newimages[i]=new Image();
-			newimages[i].src= arr[i];			
-		}
-	}		
-	preloadimages([
-	"word1.png","word2.png","snow.png","play-button.png","pause-button.png"]);
-	
-	var ready=0;
-	var imgLoad=setInterval(function(){ 
-		if(ready==newimages.length) 
-		{
-			clearInterval(imgLoad);
-			document.getElementById('loading').style.display="none";
-			document.getElementById('div0').style.display="block";
-			return;
-		}	
-		ready=0;
-		for (var i=0; i<newimages.length; i++) if(newimages[i].height)ready++;
-		document.getElementById('num').innerHTML="加载中<br>"+parseInt(100*ready/newimages.length)+"%";		
-	}, 100);
-	
-	/* preload end */
-	
-	
-	
-	
 	var oV = document.getElementById('v1');
 	var aInput = document.getElementsByTagName('input');
 	var oPauseplay = document.getElementById('pauseplay');
@@ -49,7 +17,7 @@ window.onload = function(){
 	var oDiv2 = document.getElementById('div2');
 	var oImg = document.getElementById('img');
 	
-	if(isWeiXin()) oDiv1.style.top="-40px";
+	//if(isWeiXin()) oDiv1.style.top="-40px";
 	
 	var disX = 0;
 	var disX2 = 0;
