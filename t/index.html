@@ -8,6 +8,39 @@
 <script>
 
 window.onload = function(){
+
+	/* preload 
+	var newimages=[];
+	function preloadimages(arr){
+		
+		var arr=(typeof arr!="object")? [arr] : arr  ;
+		for (var i=0; i<arr.length; i++){
+			newimages[i]=new Image();
+			newimages[i].src= arr[i];			
+		}
+	}		
+	preloadimages([
+	"word1.png","word2.png","snow.png","play-button.png","pause-button.png"]);
+	
+	var ready=0;
+	var imgLoad=setInterval(function(){ 
+		if(ready==newimages.length) 
+		{
+			clearInterval(imgLoad);
+			document.getElementById('loading').style.display="none";
+			document.getElementById('div0').style.display="block";
+			return;
+		}	
+		ready=0;
+		for (var i=0; i<newimages.length; i++) if(newimages[i].height)ready++;
+		document.getElementById('num').innerHTML="加载中<br>"+parseInt(100*ready/newimages.length)+"%";		
+	}, 100);
+	
+	/* preload end */
+	
+	
+	
+	
 	var oV = document.getElementById('v1');
 	var aInput = document.getElementsByTagName('input');
 	var oPauseplay = document.getElementById('pauseplay');
@@ -184,11 +217,11 @@ window.onload = function(){
 	
 	}
 	
-	window.onresize=function(){  
+/*	window.onresize=function(){  
 		if(oDiv1.offsetLeft==0)  oPauseplay.style.top = oDiv1.offsetWidth*0.49 + 'px';
 		else oPauseplay.style.top ='335px'; 
 		nowTime();
-	}  
+	}  */
 	
 	
 };
@@ -207,6 +240,11 @@ function isWeiXin(){
 </head>
 
 <body>
+	<!--div id="loading" class="loading">	
+		<div class="dot"></div>
+		<div class="num" id="num">加载中<br>0%</div>
+		<div class="info">雨霖铃</div>
+	</div-->
 	<div id="div0">
 		<div id="img"> 
 			<img class="vimg" id="word1" src="word1.png">
@@ -230,22 +268,19 @@ function isWeiXin(){
 			<img class="vimg" id="point17" src="snow.png">
 			<img class="vimg" id="point18" src="snow.png">
 			
-			<img class="vimg" id="pauseplay" src="play-button.png" >	
-		</img>
-		<video id="v1" width="848" x5-video-player-type="h5" x5-video-orientation="landscape|portrait" style="margin-top:15px;object-fit: fill;">
+			<img class="vimg" id="pauseplay" src="play-button.png" > 
+		</div>
+		
+		<video id="v1" preload="load" width="848" x5-video-player-type="h5" x5-video-orientation="landscape|portrait" style="object-fit: fill;">
 			<source src="ttsj1.mp4" type="video/mp4" />
 			<source src="ttsj1.ogg" type="video/ogg" />
 			Your browser does not support HTML5 video.
 		</video>
-		<br/>
-		
-		
+			
 		<div id="div1">
 			<div id="div2"></div>
 			<div id="info">雨霖铃</div>
 		</div>
-		<img id="word" >
 	</div>
-	<br/>
 </body>
 </html>

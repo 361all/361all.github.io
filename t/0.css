@@ -1,16 +1,12 @@
-body{ background: #3980c3;}
+ *{margin:0;padding:0}
+ body{ background: #3980c3;}
+
 #div0{ text-align:center;width:848px;height:500px;margin-left: auto;margin-right: auto;}
 #div1{ width:848px; height:20px; top:-20px;background-image: url(div1.png); overflow:hidden; color:white;position:relative;margin:0 auto;}
 #div2{ width:20px; height:20px; background-color:rgba(255,255,255,0.8); position:absolute; left:0;}
-#bimg{ 
-	margin-left: auto;
-    margin-right: auto;
-	display: block;
-    height: auto;
-}
+
 
 #img{ 
-
 	position:  absolute;
 	width: 848px;
 	height:500px;
@@ -44,7 +40,7 @@ body{ background: #3980c3;}
 
 #word1{  cursor: auto; top: 90px; left:70px; display:none;}
 #word2{  cursor: auto; top: 20px; left:82px; display:none;}
-#pauseplay{ cursor: pointer; top: 420px; left:728px;}
+#pauseplay{ cursor: pointer; top: 430px; left:725px;}
 
 a{color:#777;} 
 
