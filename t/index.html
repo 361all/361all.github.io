@@ -16,6 +16,8 @@ window.onload = function(){
 	var oDiv2 = document.getElementById('div2');
 	var oImg = document.getElementById('img');
 	
+	if(isWeiXin()) oDiv1.style.top="-40px";
+	
 	var disX = 0;
 	var disX2 = 0;
 	
@@ -190,6 +192,16 @@ window.onload = function(){
 	
 	
 };
+
+function isWeiXin(){
+  var ua = window.navigator.userAgent.toLowerCase();
+
+  if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+  return true;
+  }else{
+  return false;
+  }
+}
 
 </script>
 </head>
