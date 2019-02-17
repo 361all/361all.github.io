@@ -1,4 +1,14 @@
- *{margin:0;padding:0}
+ *{
+ margin:0;
+ padding:0;
+     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    outline: none;
+	}
  body{ background: #3980c3;}
 
 #div0{ text-align:center;width:848px;height:500px;margin-left: auto;margin-right: auto;}
