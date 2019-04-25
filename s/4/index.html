@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"宋体";background:#000; color:#FFF }
+		#allmap { height: 96%}
+		#info{text-align:center; }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=uIGNq6dLthEQ5iM5G8mNfCl1BDDfWx9d"></script>
+    <title>图书漂流</title>
+</head>
+<body>
+<div id="allmap"></div>
+<div id="info">【图书漂流计划】查看：点击图标；缩放：滚动鼠标</div>
+</body>
+</html>
+<style type="text/css">
+   .anchorBL{
+       display:none;
+   }
+</style>
+<script type="text/javascript">
+
+    
+
+	var pointinfo=[
+	{ "pic":"city/xiamen.png","lng":118.10,"lat":24.46,"w":0.1,"h":0.1,"city":"厦门","time":"3月5日~3月7日"},
+	{ "pic":"city/wuhan.png","lng":114.3,"lat":30.6,"w":0.1,"h":0.1,"city":"武汉","time":"3月9日~3月10日"},
+	{ "pic":"city/hangzhou.png","lng":120.2,"lat":30.3,"w":0.1,"h":0.1,"city":"杭州","time":"3月11日~3月14日"},
+	{ "pic":"city/shanghai.png","lng":121.48,"lat":31.22,"w":0.1,"h":0.1,"city":"上海","time":"3月15日~3月18日"},
+	{ "pic":"city/nanjing.png","lng":118.78 ,"lat":32.07,"w":0.1,"h":0.1,"city":"南京","time":"3月19日~3月20日"},
+	{ "pic":"city/qingdao.png","lng":120.38 ,"lat":36.07,"w":0.1,"h":0.1,"city":"青岛","time":"3月21日~3月22日"},
+	{ "pic":"city/beijing.png","lng":116.3,"lat":39.97,"w":0.1,"h":0.1,"city":"北京","time":"3月24日~3月26日"},
+	{ "pic":"city/xian.png","lng":108.95,"lat":34.27,"w":0.1,"h":0.1,"city":"西安","time":"3月27日~3月28日"},
+	{ "pic":"city/chongqing.png","lng":106.53,"lat":29.55,"w":0.1,"h":0.1,"city":"重庆","time":"3月29日~3月31日"},
+	{ "pic":"city/zhangzhou.png","lng":117.35,"lat":24.51,"w":0.1,"h":0.1,"city":"漳州","time":"4月2日~4月3日"},];
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('a c=8 7.1f("V",{T:S,U:6,P:11});c.Q(8 7.R());a L=8 7.b(15.1,14.17);a K=10;c.16(L,K);c.W(Z);Y(a i=0;i<4.z;i++){a J=8 7.b(4[i].f-4[i].w*2,4[i].d-4[i].h*2);a E=8 7.b(4[i].f+4[i].w*2,4[i].d+4[i].h*2);a n=8 7.y(8 7.x(J,E),{v:1,C:6,A:12});n.s(4[i].X);c.p(n);(j(i){n.u("r",j(e){o(i)},"t")})(i);g=i-1;D(i==0)g=4.z-1;a F=8 7.b(4[i].f-0.12-0.1,4[i].d*1.q-0.3-0.1);a O=8 7.b(4[i].f-0.12+0.1,4[i].d*1.q-0.3+0.1);a m=8 7.y(8 7.x(F,O),{v:1,C:9,A:12});m.s("m.G");c.p(m);(j(g){m.u("r",j(e){c.N(8 7.b(4[g].f,4[g].d));o(g)},"t")})(g);k=i+1;D(i==4.z-1)k=0;a H=8 7.b(4[i].f+0.12-0.1,4[i].d*1.q-0.3-0.1);a I=8 7.b(4[i].f+0.12+0.1,4[i].d*1.q-0.3+0.1);a l=8 7.y(8 7.x(H,I),{v:1,C:9,A:12});l.s("l.G");c.p(l);(j(k){l.u("r",j(e){c.N(8 7.b(4[k].f,4[k].d));o(k)},"t")})(k);a M=8 7.19([8 7.b(4[g].f,4[g].d-0.13),8 7.b(4[i].f,4[i].d-0.13)],{1d:"1c",1h:3,1b:0.5});c.p(M)}j o(B){18.1a("1e").1j="1i "+4[B].n+" "+4[B].1g}',62,82,'||||pointinfo|||BMap|new||var|Point|map|lat||lng|previd|||function|nextid|next|prev|city|showinfo|addOverlay|0015|click|setImageURL|false|addEventListener|opacity||Bounds|GroundOverlay|length|displayOnMaxLevel|id|displayOnMinLevel|if|NE|SWp|png|SWn|NEn|SW|zoom|point|polyline|panTo|NEp|maxZoom|addControl|MapTypeControl|BMAP_SATELLITE_MAP|mapType|minZoom|allmap|enableScrollWheelZoom|pic|for|true|||||24|118|centerAndZoom|46|document|Polyline|getElementById|strokeOpacity|red|strokeColor|info|Map|time|strokeWeight|图书漂流计划|innerHTML'.split('|'),0,{}))
+
+
+
+  
+</script>
