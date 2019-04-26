@@ -1,0 +1,61 @@
+ *{
+ margin:0;
+ padding:0;
+     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    outline: none;
+	}
+ body{ background: #3980c3;}
+
+#div0{ text-align:center;width:848px;height:500px;margin-left: auto;margin-right: auto;}
+#div1{ width:848px; height:20px; top:-20px;background-image: url(div1.png); overflow:hidden; color:white;position:relative;margin:0 auto;}
+#div2{ width:20px; height:20px; background-color:rgba(255,255,255,0.8); position:absolute; left:0;}
+
+
+#img{ 
+	position:  absolute;
+	top:-15px;
+	width: 848px;
+	height:500px;
+
+}
+.vimg{
+	cursor: pointer;
+    position: absolute;
+	z-index:3;
+
+}
+#point1{  top: 129px; left:515px; display:none;}
+#point2{  top: 129px; left:466px; display:none;}
+#point3{  top: 129px; left:417px; display:none;}
+#point4{  top: 85px; left:365px; display:none;}
+#point5{  top: 61px; left:310px; display:none;}
+#point6{  top: 91px; left:257px; display:none;}
+#point7{  top: 109px; left:203px; display:none;}
+#point8{  top: 62px; left:147px; display:none;}
+#point9{  top: 66px; left:90px; display:none;}
+
+#point11{  top: 59px; left:515px; display:none;}
+#point12{  top: 54px; left:457px; display:none;}
+#point13{  top: 79px; left:394px; display:none;}
+#point14{  top: 65px; left:337px; display:none;}
+#point15{  top: 109px; left:270px; display:none;}
+#point16{  top: 38px; left:216px; display:none;}
+#point17{  top: 63px; left:159px; display:none;}
+#point18{  top: 82px; left:102px; display:none;}
+
+
+#word1{  cursor: auto; top: 90px; left:70px; display:none;}
+#word2{  cursor: auto; top: 20px; left:82px; display:none;}
+#pauseplay{ cursor: pointer; top: 430px; left:725px;}
+
+a{color:#777;} 
+
+
+@media screen and (max-device-width:640px){
+
+}
